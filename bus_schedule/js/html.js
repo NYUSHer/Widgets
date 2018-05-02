@@ -9,11 +9,16 @@
     let $A2D1 = $("#A2D1");
     let $A2D2 = $("#A2D2");
 
-    $buttonClick.on("submit", e => {
-        e.preventDefault();
+    // $buttonClick.on("submit", e => {
+    //     e.preventDefault();
+    //     refresh();
+    // });
+    
+    // auto load bus schedule
+    $( document ).ready(function() {
         refresh();
     });
-
+    
     function submission() {
         $searchButton.addClass("loading");
         refresh();
