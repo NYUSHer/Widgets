@@ -8,6 +8,7 @@
     let $D2A2 = $("#D2A2");
     let $A2D1 = $("#A2D1");
     let $A2D2 = $("#A2D2");
+    var clicked = false;
 
     // $buttonClick.on("submit", e => {
     //     e.preventDefault();
@@ -18,7 +19,17 @@
     $( document ).ready(function() {
         refresh();
     });
-
+    
+    $( "#widget" ).click(function() {
+        if (clicked == false) {
+            window.location.hash = "2";
+            clicked = true;
+        } else {
+            window.location.hash = "1";
+            clicked = false;
+        }
+      });
+    
     function submission() {
         $searchButton.addClass("loading");
         refresh();
